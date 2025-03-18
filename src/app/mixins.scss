@@ -1,0 +1,10 @@
+@mixin dFlex($jContent: center, $aItems: center) {
+  display: flex;
+  justify-content: $jContent;
+  align-items: $aItems;
+}
+
+@mixin borderStyle($bRadius: 8px, $bStyle: none, $bColor: whitesmoke) {
+  border-radius: $bRadius;
+  border: 2px $bStyle $bColor;
+}
