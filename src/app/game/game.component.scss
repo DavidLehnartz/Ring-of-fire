@@ -1,0 +1,37 @@
+@use "./../mixins.scss" as *;
+
+section {
+  @include dFlex();
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./../../../public/img/backgrounds/green_bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  > div {
+    @include dFlex();
+    position: relative;
+
+    > img {
+      position: absolute;
+      transition: 50% 50%;
+      width: 180px;
+      height: auto;
+    }
+  }
+
+  .top-card {
+    cursor: pointer;
+    transition: all 225ms ease-in-out;
+
+    &:hover {
+      transform: scale(1.1) translateX(-20px) translateY(-15px);
+    }
+  }
+
+  .took-card {
+    transition: all 225ms ease-in-out;
+    transform: scale(1.5) !important /* translateX(-20px) translateY(-15px) */;
+  }
+}

@@ -1,0 +1,19 @@
+<section>
+  <div>
+    @for (card of [0,1,2,3]; track card; let index = $index) {
+    <img
+      [ngStyle]="{ 'right.px': index * 5 }"
+      src="img/cards_old/card_cover.png"
+      alt="card"
+    />
+    <img
+      (click)="takeCard()"
+      class="top-card"
+      [class.took-card]="pickCardAnimation"
+      [ngStyle]="{ 'right.px': 25 }"
+      src="img/cards_old/card_cover.png"
+      alt=""
+    />
+    }
+  </div>
+</section>
